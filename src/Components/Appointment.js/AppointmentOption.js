@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
+import { AuthContext } from "../../Contexts/UserContext";
 
 const AppointmentOption = ({ option, setTreatment }) => {
   const { name, slots, price } = option;
+  const {user} = useContext(AuthContext)
   return (
     <div className="card shadow-xl">
       <div className="card-body text-center">
@@ -16,7 +18,7 @@ const AppointmentOption = ({ option, setTreatment }) => {
 
         <div className="card-actions justify-center">
           <label
-            disabled={slots.length === 0}
+            disabled={!user?.email || slots.length === 0 }
             htmlFor="booking-modal"
             className="btn btn-primary text-white"
             onClick={() => {
