@@ -13,7 +13,7 @@ const AvailableAppointment = ({ selected }) => {
     queryKey: ["appointmentOption", date],
     queryFn: async () => {
       const res = await fetch(
-        `http://localhost:5000/appointmentOption?date=${date}`
+        `https://doctors-portal-server-bay.vercel.app/appointmentOption?date=${date}`
       );
       const data = await res.json();
       return data;
@@ -21,7 +21,7 @@ const AvailableAppointment = ({ selected }) => {
   });
 
   // useEffect(() => {
-  //   fetch("http://localhost:5000/appointmentOption")
+  //   fetch("https://doctors-portal-server-bay.vercel.app/appointmentOption")
   //     .then((res) => res.json())
   //     .then((data) => setAppointmentOptions(data));
   // }, []);
