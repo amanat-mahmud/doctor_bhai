@@ -12,4 +12,4 @@ A fully functional website on booking doctor's appointment.
 5. TailwindCSS
 6. React Stripe
 
-Live Site : https://doctors-portal-aaca7.web.app/
+Live Site : 
