@@ -24,12 +24,7 @@ const Nav = () => {
       <li>
         <Link to={"/appointment"}>Appointment</Link>
       </li>
-      <li>
-        <Link>About</Link>
-      </li>
-      <li>
-        <Link>Reviews</Link>
-      </li>
+
       <li>
         <Link to={"/dashboard"}>Dashboard</Link>
       </li>
